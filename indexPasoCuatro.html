@@ -43,7 +43,21 @@
         <button type="submit">Enviar</button>
 
    </form>
+<!-- cartelito de que  los datos estan bien cargados
+ si presionamos el boton el formulario se limpia para cargar mas-->
+     <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            if (this.checkValidity()) {
+                alert("LOS DATOS FUERON CARGADOS CORRECTAMENTE");
+                this.reset();
+            }
+        });
+     </script>
 
 </body>
+
+
 </html>
 
