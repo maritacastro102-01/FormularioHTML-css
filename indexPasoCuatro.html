@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Datos Personales</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body> 
+   <h1>Formulario de Datos Personales</h1>
+     
+   <p>Selecciona el estilo de la página</p>
+
+    <input type="radio" id="claro" name="estilo">
+    <label for="claro">Estilo Claro</label>
+
+    <input type="radio" id="oscuro" name="estilo" checked>
+    <label for="oscuro">Estilo Oscuro</label>
+   
+    <br><br>
+
+    <form action="#" method="POST"> <!--lo habia hecho sin el form, pero no me tomaba las comprobaciones--> 
+
+        <!--Control de ape y nombre con min y max de caracteres, que tome mayuscula y minuscula, que 
+        considere acentos y las ñ y que muestre advertencia-->
+        Nombre:<br> 
+        <input type="text" name="nombre" required minlength="2" maxlength="30" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" title="El nombre solo debe contener letras."><br><br>
+        Apellido:<br>
+        <input type="text" name="apellido" required minlength="2" maxlength="30" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" title="El Apellido solo debe contener letras."><br><br>
+        Email:<br>
+        <input type="email" name="email" required><br><br><!--controles porpios del emial, como quer tenga el @-->
+        Fecha de nacimiento:<br> <!--Ejemlplo de control de fechas inicial y limite-->
+        <input type="date" name="fecha-nacimiento" required min="1900-01-01" max="2026-12-31"><br><br>
+        País de residencia:<br>
+        <select name="pais" required>
+            <option value="" disabled selected>-- Selecciona un país --</option>
+            <option value="argentina">Argentina</option>
+            <option value="chile">Chile</option>
+            <option value="colombia">Colombia</option>
+            <option value="mexico">México</option>
+            <option value="espaÑa">España</option>
+        </select><br><br>
+
+        <!--boton -->
+        <button type="submit">Enviar</button>
+
+   </form>
+
+</body>
+</html>
+

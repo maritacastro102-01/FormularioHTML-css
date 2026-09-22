@@ -1,0 +1,29 @@
+/*estilo por defecto-  CLARO--- le cambie un poco el aspecto y la letra, queda mejor*/
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+input, select {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+/*estlo OSCURO*- cuando se selecciona la opcion oscuro, cambia tambien el aspecto de todos los elementos*/
+body:has(#oscuro:checked) {
+    background-color: #1a1a1a;
+    color: #f4f4f9;
+}
+
+body:has(#oscuro:checked) input,
+body:has(#oscuro:checked) select 
+{
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-color: #555;
+}
